@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HAW Hamburg Kalendar Bot</title>
+  <meta name="description" content="Ein Telegram Bot, der persönliche Veranstaltungskalender für die HAW Hamburg erzeugt.">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:url" content="https://calendarbot.hawhh.de">
+  <meta property="og:site_name" content="EdJoPaTo">
+  <meta property="og:title" content="HAW Hamburg Kalendar Bot">
+  <meta property="og:description" content="Ein Telegram Bot, der persönliche Veranstaltungskalender für die HAW Hamburg erzeugt.">
+  <link rel="stylesheet" type="text/css" href="/main.css">
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="container">
+      <a href="https://edjopato.de">EdJoPaTo</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1 class="title">HAW Hamburg Kalendar Bot</h1>
+    <h2 class="subtitle">Ein Telegram Bot, der persönliche Veranstaltungskalender für die HAW Hamburg erzeugt.</h2>
+  </header>
+
+  <content class="tg">
+    <p>
+      <img src="/assets/veranstaltungsplan.png" alt="Veranstaltungsplan" style="max-height: 400px" />
+      <br /> Du kommst von der HAW Hamburg und studierst im Department Informatik oder Elektrotechnik? Dieser Veranstaltungsplan kommt dir bekannt vor und er ist dir zu unübersichtlich? Zu viele Veranstaltungen die du nicht belegst? Du bist in mehreren
+      Semestern und musst mehrere Pläne angucken?
+      <br /> Vielleicht hilft dir ja mein <a href="//telegram.me/HAWHHCalendarBot" target="_blank">Kalender Bot @HAWHHCalendarBot</a>.
+    </p>
+
+    <h1>Der Telegram Bot</h1>
+
+    <p>
+      Wenn du <a href="//telegram.org" target="_blank">Telegram</a> benutzt, dann sind dir sicher schon einmal die Bots aufgefallen. Mit Hilfe so eines Telegram Bots kannst du dir deine Veranstaltungen zusammenstellen. Damit wird dann automatisch ein
+      abonnierbarer Kalender für dich erstellt. Diesen kannst du dann in jedem guten Kalenderprogramm hinzufügen.
+    </p>
+    <p>
+      Hier geht es zum <a href="//telegram.me/HAWHHCalendarBot" target="_blank">Telegram Bot @HAWHHCalendarBot</a>.
+      <img src="/assets/tdesktop.png" alt="Calendar Bot am Desktop" style="max-height: 800px" />
+    </p>
+    <h2>iOS/ macOS/ Desktop Browser</h2>
+    <p>
+      Geh im Bot auf <code>Kalender URL anfordern</code> und öffne den iOS Link. Klicke/ tippe in der sich öffnenden Website auf <code>Subscribe Calendar</code>.
+      <img src="/assets/ios.png" alt="Calendar Bot auf iOS" />
+    </p>
+    <h2>Android/ Google Kalender</h2>
+    <p>
+      Android bezieht seine Informationen aus dem Google Kalender. Um den Kalender hinzufügen gehst du auf <a href="https://calendar.google.com" target="_blank">calendar.google.com</a> (meldest dich an) und fügst dann auf der linken Seite unter <code>Other calendars</code>      -> <code>Add by URL</code> den Kalender Link hinzu, den du im Bot unter <code>Kalender URL anfordern</code> erhältst.
+    </p>
+
+    <h1>Behind the Scenes</h1>
+    <h2>Der Telegram Bot</h2>
+    <p>
+      Wenn du den Telegram Bot benutzt, legt dieser eine Config Datei an. In dieser stehen Informationen wie deine öffentlichen Telegram Informationen, die der Bot aber erst erhält, sobald du ihn das erste mal anschreibst. Fügst du Veranstaltungen hinzu oder
+      entfernst diese, werden sie in die Config Datei übertragen. Außerdem speichert der Bot deine Einstellungen, wie das StISys Update Feature.
+    </p>
+    <div>
+      <pre><code>{
+  "chat": {
+    "id": 2956631,
+    "first_name": "Edgar",
+    "username": "EdJoPaTo"
+  },
+  "config": {
+    "events": [
+      "MINF-SS-MD [MT]",
+      "MINF-SS-MDP/03 [MTP]",
+      "MINF-SS-TTI [TT2]",
+      "MINF-SS-TTIP/03 (TTP2)",
+      "MINF1-GSM [AW1 AW2]"
+    ],
+    "settings": {
+      "stisysUpdate": true
+    }
+  }
+}
+      </code></pre> Der Inhalt einer Config Datei
+    </div>
+    <h2>Das Backend</h2>
+    <p>
+      Einmal die Stunde läuft ein kleines Programm auf meinem NAS zu Hause und lädt alle Config Dateien herunter. Außerdem werden alle ICS Dateien vom HAW-Server geladen. Daraus erstellt das Programm dann für jeden Nutzer einen eigenen ICS Kalender und lädt
+      diesen dann auf meinen Webspace hoch.
+    </p>
+    <h2>Dein Endgerät</h2>
+    <p>
+      Je nach dem wie dein Endgerät eingestellt ist, wird es die ICS Datei von meinem Server alle paar Stunden laden. Apple Geräte wie iOS oder macOS laden als häufigste Einstellmöglichkeit alle 15 Minuten eine neue Version. Google macht das etwas anders: Ein
+      Google Server lädt alle paar Stunden (teilweise auch >24h) alle bei Google eingetragenen Kalender von meinem Server. Die Android Geräte bekommen dann, wenn sich etwas geändert hat, diese Änderung sofort auf das Gerät gepusht.
+    </p>
+    <h2>Das StISys Update</h2>
+    <p>
+      Alle 15 Minuten lädt der Bot die Einstiegsseite vom <a href="https://stisys.haw-hamburg.de" target="_blank">StISys</a> herunter und vergleicht die Dateigröße mit der von vor 15 Minuten. Unterscheidet sich diese, weil zum Beispiel eine neue Mitteilung
+      hinzu gekommen ist, werden alle Nutzer, die dies aktiviert haben, benachrichtigt.
+    </p>
+    <h2>GitHub</h2>
+    <p>
+      Neugierig auf den Quellcode des Telegram Bots? Du willst Helfen oder etwas Ähnliches entwickeln? Dann schau dir gern mal meinen Quellcode auf <a href="//github.com/EdJoPaTo/telegramHAWHHCalendarBot" target="_blank">GitHub</a> an.
+      <br />Der Quellcode des Backend wird nicht auf GitHub bereitgestellt. Das… will keiner sehen.
+    </p>
+    <h2>Fehler oder Verbesserungsvorschlag?</h2>
+    <p>
+      Schreib mich einfach bei Telegram an: <a href="//telegram.me/EdJoPaTo" target="_blank">@EdJoPaTo</a> oder erstelle ein <a href="//github.com/EdJoPaTo/telegramHAWHHCalendarBot/issues" target="_blank">GitHub Issue</a>.
+    </p>
+  </content>
+
+  <footer>
+    <p>
+      <a href="https://edjopato.de" target="_blank">Meine Website</a>
+    </p>
+    <p>
+      <a href="/impressum.html">Impressum</a>
+    </p>
+    <p>
+      <a href="https://github.com/HAWHHCalendarBot" target="_blank" aria-label="GitHub">
+            <svg class="icon is-16x16" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+          </a>
+      <a href="mailto:info@3t0.de" target="_blank" aria-label="Mail">
+            <svg class="icon is-16x16" width="16" height="16" viewBox="0 0 76 54"><path d="M27 31.2l5.4 5.3c3 3 7.7 3.2 11 0l5.6-5.3L71.8 54H4.2zM0 4.2L22.8 27 0 49.7zM53.2 27L76 4.2v45.5zm-17 5L4.2 0h67.6L39.6 31.8c-.8.7-2.7.8-3.4 0z"/></svg>
+          </a>
+    </p>
+  </footer>
+
+</body>
+
+</html>
