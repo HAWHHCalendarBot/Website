@@ -38,14 +38,19 @@ header #logo {
   min-height: 100px;
 }
 
-nav .container, content h1, content h2, content p, content div {
-  max-width: 1000px;
+content p, content div {
+  margin: 1rem auto;
 }
 
-content p, content div {
-  border-radius: 5px;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-  margin: 1rem auto;
+@media screen and (min-width: 1060px) {
+  nav .container, content h1, content h2, content p, content div {
+    max-width: 1000px;
+  }
+
+  content p, content div {
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  }
 }
 
 content p, content div {
