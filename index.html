@@ -87,10 +87,10 @@
       </code></pre> Der Inhalt einer Config Datei
     </div>
     <h2>Das Backend</h2>
-    <p>
-      Einmal die Stunde läuft ein kleines Programm auf meinem NAS zu Hause und lädt alle Config Dateien herunter. Außerdem werden alle ICS Dateien vom HAW-Server geladen. Daraus erstellt das Programm dann für jeden Nutzer einen eigenen ICS Kalender und lädt
-      diesen dann auf meinen Webspace hoch.
-    </p>
+    <pr>
+      Im Hintergrund läuft auf einem vServer das Backend. Dieses tut im wesentlichen zwei Dinge: Die aktuellen ICS Dateien vom HAW-Server laden und aus den Veranstaltungskalendern und den Config Dateien die Kalender generieren. Diese aus den Configs der Nutzer
+      generierten Kalender werden dann zum Abonnieren bereitgestellt.
+    </pr>
     <h2>Dein Endgerät</h2>
     <p>
       Je nach dem wie dein Endgerät eingestellt ist, wird es die ICS Datei von meinem Server alle paar Stunden laden. Apple Geräte wie iOS oder macOS laden als häufigste Einstellmöglichkeit alle 15 Minuten eine neue Version. Google macht das etwas anders: Ein
@@ -103,12 +103,11 @@
     </p>
     <h2>GitHub</h2>
     <p>
-      Neugierig auf den Quellcode des Telegram Bots? Du willst Helfen oder etwas Ähnliches entwickeln? Dann schau dir gern mal meinen Quellcode auf <a href="//github.com/EdJoPaTo/telegramHAWHHCalendarBot" target="_blank">GitHub</a> an.
-      <br />Der Quellcode des Backend wird nicht auf GitHub bereitgestellt. Das… will keiner sehen.
+      Neugierig auf den Quellcode des Telegram Bots? Du willst Helfen oder etwas Ähnliches entwickeln? Dann schau dir gern mal meinen Quellcode auf <a href="//github.com/HAWHHCalendarBot" target="_blank">GitHub</a> an.
     </p>
     <h2>Fehler oder Verbesserungsvorschlag?</h2>
     <p>
-      Schreib mich einfach bei Telegram an: <a href="//telegram.me/EdJoPaTo" target="_blank">@EdJoPaTo</a> oder erstelle ein <a href="//github.com/EdJoPaTo/telegramHAWHHCalendarBot/issues" target="_blank">GitHub Issue</a>.
+      Schreib mich einfach bei Telegram an: <a href="//telegram.me/EdJoPaTo" target="_blank">@EdJoPaTo</a> oder erstelle ein Issue im dazu passenden Repo in der <a href="//github.com/HAWHHCalendarBot" target="_blank">GitHub Organisation des Kalender Bots</a>.
     </p>
   </content>
 
