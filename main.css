@@ -28,14 +28,14 @@ nav a, nav a:active, nav a:visited, nav a:focus {
 
 header {
   text-align: center;
-  padding-bottom: 25vmin;
-  padding-top: 25vmin;
+  padding-bottom: 20vmin;
+  padding-top: 20vmin;
   color: whitesmoke;
 }
 
 header #logo {
-  height: 17vmin;
-  min-height: 100px;
+  height: 25vmin;
+  min-height: 150px;
 }
 
 content p, content div {
