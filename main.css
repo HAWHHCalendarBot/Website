@@ -38,10 +38,6 @@ header #logo {
   min-height: 150px;
 }
 
-content p, content div {
-  margin: 1rem auto;
-}
-
 @media screen and (min-width: 1060px) {
   nav .container, content h1, content h2, content p, content div {
     max-width: 1000px;
@@ -55,6 +51,7 @@ content p, content div {
 
 content p, content div {
   background-color: whitesmoke;
+  margin: 1rem auto;
   padding: 1.25rem;
 }
 
