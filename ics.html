@@ -39,26 +39,36 @@
     .calendaricon>div {
       background-color: #333333;
       width: 30vmin;
-      height: 26vmin;
       font-size: 23vmin;
     }
   </style>
 </head>
-<?php
-  $link = $_GET['url'];
-?>
 
 <body>
   <div class="content">
-    <a href="webcal://<?php echo $link; ?>">
+    <a id="calurl">
       <div class="calendaricon">
-        <div>
-          <?php echo date('d'); ?>
+        <div id="dateNumber">
+          1
         </div>
       </div>
       Subscribe Calendar</a>
     </a>
   </div>
 </body>
+
+<script type="text/javascript">
+  document.getElementById('dateNumber').innerHTML = new Date().getDate()
+
+  var pair = window.location.search.slice(1).split('=');
+  if (pair[0] === 'url') {
+    var url = 'webcal://' + pair[1]
+    const urlElement = document.getElementById('calurl')
+    urlElement.setAttribute('href', url)
+    console.log(url, urlElement);
+  } else {
+    console.error('url in query is missing!')
+  }
+</script>
 
 </html>
