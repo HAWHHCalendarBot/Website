@@ -1,4 +1,4 @@
-FROM nginx:1.16-alpine
+FROM nginx:1.19-alpine
 
 VOLUME [ "/calendars", "/eventfiles" ]
 
