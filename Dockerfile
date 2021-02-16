@@ -1,4 +1,4 @@
-FROM nginx:1.19-alpine
+FROM docker.io/library/nginx:1.19-alpine
 
 VOLUME [ "/calendars", "/eventfiles" ]
 
