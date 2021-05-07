@@ -1,6 +1,8 @@
-FROM docker.io/library/nginx:1.19-alpine
+FROM docker.io/library/nginx:1.20-alpine
+RUN apk --no-cache upgrade
 
-VOLUME [ "/calendars", "/eventfiles" ]
+VOLUME /calendars
+VOLUME /eventfiles
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 RUN nginx -t
