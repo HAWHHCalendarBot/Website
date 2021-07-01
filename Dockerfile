@@ -1,4 +1,4 @@
-FROM docker.io/library/nginx:1.20-alpine
+FROM docker.io/library/nginx:1-alpine
 RUN apk --no-cache upgrade
 
 VOLUME /calendars
