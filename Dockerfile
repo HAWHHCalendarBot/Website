@@ -15,4 +15,4 @@ RUN ln -s /calendars tg
 
 COPY assets assets
 COPY backgrounds backgrounds
-COPY favicon.ico *.html *.css ./
+COPY favicon.ico *.html *.css *.js ./
