@@ -39,23 +39,23 @@ header #logo {
 }
 
 @media screen and (min-width: 1060px) {
-  nav .container, content h1, content h2, content h3, content p, content div {
+  nav .container, main h1, main h2, main h3, main p, main div {
     max-width: 1000px;
   }
 
-  content p, content div {
+  main p, main div {
     border-radius: 5px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   }
 }
 
-content p, content div {
+main p, main div {
   background-color: whitesmoke;
   margin: 1rem auto;
   padding: 1.25rem;
 }
 
-content.tg p, content.tg div {
+main.tg p, main.tg div {
   background-color: #dfe4e8;
   background-size: cover;
   background-repeat: no-repeat;
@@ -63,34 +63,34 @@ content.tg p, content.tg div {
   background-image: url("/backgrounds/telegram.jpg");
 }
 
-content p img {
+main p img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
 }
 
-content p img:not(:first-child) {
+main p img:not(:first-child) {
   padding-top: 1rem;
 }
 
-content p img:not(:last-child) {
+main p img:not(:last-child) {
   padding-bottom: 1rem;
 }
 
-content h1, content h2, content h3 {
+main h1, main h2, main h3 {
   color: whitesmoke;
   margin: 0 auto;
 }
 
-content h1 {
+main h1 {
   padding: 3rem 0.5rem 2rem;
 }
 
-content h2 {
+main h2 {
   padding: 1rem 0.5rem 0;
 }
 
-content h3 {
+main h3 {
   padding: 0.5rem 0.5rem 0;
 }
 
