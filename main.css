@@ -115,3 +115,7 @@ a:hover {
 footer a:hover, nav a:hover {
   color: #dbdbdb;
 }
+
+#veranstaltungsplan {
+  max-height: 400px;
+}
