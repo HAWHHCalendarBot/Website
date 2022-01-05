@@ -85,13 +85,18 @@ main h3 {
 
 footer {
 	color: whitesmoke;
-	padding: 3rem 1.5rem 6rem;
+	padding: 3rem 1rem;
 	text-align: center;
+}
+
+footer a {
+	text-decoration: none;
 }
 
 footer svg {
 	fill: whitesmoke;
 	margin: 4px;
+	transition: all 0.2s ease;
 }
 
 a, a:active, a:visited, a:focus {
@@ -105,6 +110,10 @@ a:hover {
 
 footer a:hover {
 	color: #dbdbdb;
+}
+
+footer a:hover svg {
+	fill: #dbdbdb;
 }
 
 #veranstaltungsplan {
