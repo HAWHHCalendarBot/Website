@@ -33,31 +33,26 @@
 			<br /> Vielleicht hilft dir ja mein <a href="//telegram.me/HAWHHCalendarBot" target="_blank">Kalender Bot @HAWHHCalendarBot</a>.
 		</p>
 
-		<h1>Der Telegram Bot</h1>
+		<h2>Der Telegram Bot</h2>
 
 		<p>
-			Wenn du <a href="//telegram.org" target="_blank">Telegram</a> benutzt, dann sind dir sicher schon einmal die Bots aufgefallen. Mit Hilfe so eines Telegram Bots kannst du dir deine Veranstaltungen zusammenstellen. Damit wird dann automatisch ein
-			abonnierbarer Kalender für dich erstellt. Diesen kannst du dann in jedem guten Kalenderprogramm hinzufügen.
+			Wenn du <a href="//telegram.org" target="_blank">Telegram</a> benutzt, dann sind dir sicher schon einmal die Bots aufgefallen.
+			Mithilfe so eines Telegram Bots kannst du dir deine Veranstaltungen zusammenstellen.
+			Damit wird dann automatisch ein abonnierbarer Kalender für dich erstellt.
+			Diesen kannst du dann in jedem guten Kalenderprogramm hinzufügen.
 		</p>
 		<p>
 			Hier geht es zum <a href="//telegram.me/HAWHHCalendarBot" target="_blank">Telegram Bot @HAWHHCalendarBot</a>.
 			<img src="/assets/tdesktop.jpg" alt="Calendar Bot am Desktop" />
 		</p>
-		<h2>iOS/ macOS/ Desktop Browser</h2>
-		<p>
-			Sobald du eine Veranstaltung hinzugefügt hast, benutze <code>/start</code> und wähle dann <code>Kalender abonnieren</code>. Klicke/ tippe in der sich öffnenden Website auf <code>Subscribe Calendar</code>.
-			<img src="/assets/ios.jpg" alt="Calendar Bot auf iOS" />
-		</p>
-		<h2>Android/ Google Kalender</h2>
-		<p>
-			Android bezieht seine Informationen aus dem Google Kalender. Um den Kalender hinzufügen gehst du auf <a href="https://calendar.google.com" target="_blank">calendar.google.com</a> (meldest dich an) und fügst dann auf der linken Seite unter <code>Other calendars</code> -> <code>Add by URL</code> den Kalender Link hinzu, den du im Bot unter <code>/start</code> erhältst.
-		</p>
 
-		<h1>Behind the Scenes</h1>
-		<h2>Der Telegram Bot</h2>
+		<h2>Behind the Scenes</h2>
+		<h3>Der Telegram Bot</h3>
 		<p>
-			Wenn du den Telegram Bot benutzt, legt dieser eine Config Datei an. In dieser stehen Informationen wie deine öffentlichen Telegram Informationen, die der Bot aber erst erhält, sobald du ihn das erste mal anschreibst. Fügst du Veranstaltungen hinzu oder
-			entfernst diese, werden sie in die Config Datei übertragen. Außerdem speichert der Bot deine Einstellungen, wie das StISys Update Feature.
+			Wenn du den Telegram Bot benutzt, legt dieser eine Config Datei an.
+			In dieser stehen Informationen wie deine öffentlichen Telegram Informationen, die der Bot aber erst erhält, sobald du ihn das erste Mal anschreibst.
+			Fügst du Veranstaltungen hinzu oder entfernst diese, werden sie in die Config Datei übertragen.
+			Außerdem speichert der Bot deine Einstellungen, wie zur Mensa.
 		</p>
 		<div>
 			<pre><code>{
@@ -83,24 +78,30 @@
 }
 			</code></pre> Der Inhalt einer Config Datei
 		</div>
-		<h2>Das Backend</h2>
+		<h3>Das Backend</h3>
 		<p>
-			Im Hintergrund läuft auf einem vServer das Backend. Dieses tut im wesentlichen zwei Dinge: Die aktuellen ICS Dateien vom HAW-Server laden und aus den Veranstaltungskalendern und den Config Dateien die Kalender generieren. Diese aus den Configs der Nutzer
-			generierten Kalender werden dann zum Abonnieren bereitgestellt.
+			Im Hintergrund läuft auf einem vServer das Backend.
+			Dieses tut im Wesentlichen zwei Dinge:
+			Die aktuellen ICS Dateien vom HAW-Server laden und aus den Veranstaltungskalendern und den Config Dateien die Kalender generieren.
+			Diese aus den Configs der Nutzer generierten Kalender werden dann zum Abonnieren bereitgestellt.
 		</p>
-		<h2>Dein Endgerät</h2>
+		<h3>Dein Endgerät</h3>
 		<p>
-			Je nach dem wie dein Endgerät eingestellt ist, wird es die ICS Datei von meinem Server alle paar Stunden laden. Apple Geräte wie iOS oder macOS laden als häufigste Einstellmöglichkeit alle 15 Minuten eine neue Version. Google macht das etwas anders: Ein
-			Google Server lädt alle paar Stunden (teilweise auch >24h) alle bei Google eingetragenen Kalender von meinem Server. Die Android Geräte bekommen dann, wenn sich etwas geändert hat, diese Änderung sofort auf das Gerät gepusht.
+			Je nachdem wie dein Endgerät eingestellt ist, wird es die ICS Datei von meinem Server alle paar Stunden laden.
+			Apple Geräte wie iOS oder macOS laden als häufigste Einstellmöglichkeit alle 15 Minuten eine neue Version.
+			Google macht das etwas anders: Ein Google Server lädt alle paar Stunden (teilweise auch >24h) alle bei Google eingetragenen Kalender von meinem Server.
+			Die Android Geräte bekommen dann, wenn sich etwas geändert hat, diese Änderung sofort auf das Gerät gepusht.
 		</p>
-		<h2>Das StISys Update</h2>
+		<h3>Das StISys Update</h3>
 		<p>
-			Alle 15 Minuten lädt der Bot die Einstiegsseite vom <a href="https://stisys.haw-hamburg.de" target="_blank">StISys</a> herunter und vergleicht die Dateigröße mit der von vor 15 Minuten. Unterscheidet sich diese, weil zum Beispiel eine neue Mitteilung
-			hinzu gekommen ist, werden alle Nutzer, die dies aktiviert haben, benachrichtigt.
+			Alle paar Minuten werden Webseiten wie <a href="https://stisys.haw-hamburg.de" target="_blank">StISys</a> betrachtet und verglichen.
+			Unterscheidet sich diese, wird dies im Telegram Kanal <a href="//telegram.me/HAWHHWebsiteStalker" target="_blank">@HAWHHWebsiteStalker</a> und über das GitHub Repo <a href="https://github.com/HAWHHCalendarBot/study-website-stalker" target="_blank">study-website-stalker</a> verfügbar gemacht und kann abonniert werden.
 		</p>
-		<h2>GitHub</h2>
+		<h3>GitHub</h3>
 		<p>
-			Neugierig auf den Quellcode des Telegram Bots? Du willst Helfen oder etwas Ähnliches entwickeln? Dann schau dir gern mal meinen Quellcode auf <a href="//github.com/HAWHHCalendarBot" target="_blank">GitHub</a> an.
+			Neugierig auf den Quellcode des Telegram Bots?
+			Du willst Helfen oder etwas Ähnliches entwickeln?
+			Dann schau dir gern mal meinen Quellcode auf <a href="//github.com/HAWHHCalendarBot" target="_blank">GitHub</a> an.
 		</p>
 		<h2>Fehler oder Verbesserungsvorschlag?</h2>
 		<p>
