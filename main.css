@@ -21,6 +21,7 @@ header {
 }
 
 header #logo {
+	fill: white;
 	height: 25vmin;
 	min-height: 150px;
 }
