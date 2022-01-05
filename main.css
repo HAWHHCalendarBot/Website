@@ -12,20 +12,6 @@ body {
   background-attachment: fixed;
 }
 
-nav {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 1rem 0;
-}
-
-nav .container {
-  margin: 0 auto;
-  padding: 0 0.5rem;
-}
-
-nav a, nav a:active, nav a:visited, nav a:focus {
-  color: rgba(245, 245, 245, 0.7);
-}
-
 header {
   text-align: center;
   padding-bottom: 20vmin;
@@ -39,7 +25,7 @@ header #logo {
 }
 
 @media screen and (min-width: 1060px) {
-  nav .container, main h1, main h2, main h3, main p, main div {
+  main h1, main h2, main h3, main p, main div {
     max-width: 1000px;
   }
 
@@ -112,7 +98,7 @@ a:hover {
   color: #363636;
 }
 
-footer a:hover, nav a:hover {
+footer a:hover {
   color: #dbdbdb;
 }
 
