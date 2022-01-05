@@ -8,6 +8,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 RUN nginx -t
 
 WORKDIR /usr/share/nginx/html
+EXPOSE 80
 
 RUN ln -s /eventfiles/all.txt
 RUN ln -s /eventfiles/all.csv
