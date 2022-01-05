@@ -81,17 +81,19 @@ main h3 {
 }
 
 footer {
-  text-align: center;
+  color: whitesmoke;
   padding: 3rem 1.5rem 6rem;
+  text-align: center;
 }
 
 footer svg {
   fill: whitesmoke;
+  margin: 4px;
 }
 
 a, a:active, a:visited, a:focus {
-  color: #00d1b2;
-  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
 }
 
 a:hover {
