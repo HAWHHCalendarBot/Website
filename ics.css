@@ -1,33 +1,33 @@
 body {
-  background-color: #333333;
-  font-family: "Roboto Condensed", sans-serif;
-  text-align: center;
-  font-size: 10vmin;
+	background-color: #333333;
+	font-family: "Roboto Condensed", sans-serif;
+	text-align: center;
+	font-size: 10vmin;
 }
 
 * {
-  color: #00a86b;
+	color: #00a86b;
 }
 
 .content {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .calendaricon {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #00a86b;
-  width: 30vmin;
-  padding: 4vmin;
-  padding-top: 12vmin;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #00a86b;
+	width: 30vmin;
+	padding: 4vmin;
+	padding-top: 12vmin;
 }
 
 .calendaricon > div {
-  background-color: #333333;
-  width: 30vmin;
-  font-size: 23vmin;
+	background-color: #333333;
+	width: 30vmin;
+	font-size: 23vmin;
 }

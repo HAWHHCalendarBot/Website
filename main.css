@@ -1,111 +1,111 @@
 html, body, pre {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(/backgrounds/haw-raindrops1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(/backgrounds/haw-raindrops1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
 }
 
 header {
-  color: whitesmoke;
-  padding-bottom: 20vmin;
-  padding-top: 20vmin;
-  text-align: center;
-  text-shadow: 1px 1px 10px #000;
+	color: whitesmoke;
+	padding-bottom: 20vmin;
+	padding-top: 20vmin;
+	text-align: center;
+	text-shadow: 1px 1px 10px #000;
 }
 
 header #logo {
-  height: 25vmin;
-  min-height: 150px;
+	height: 25vmin;
+	min-height: 150px;
 }
 
 @media screen and (min-width: 1060px) {
-  main h1, main h2, main h3, main p, main div {
-    max-width: 1000px;
-  }
+	main h1, main h2, main h3, main p, main div {
+		max-width: 1000px;
+	}
 
-  main p, main div {
-    border-radius: 5px;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-  }
+	main p, main div {
+		border-radius: 5px;
+		box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+	}
 }
 
 main p, main div {
-  background-color: whitesmoke;
-  margin: 1rem auto;
-  padding: 1.25rem;
+	background-color: whitesmoke;
+	margin: 1rem auto;
+	padding: 1.25rem;
 }
 
 main.tg p, main.tg div {
-  background-color: #dfe4e8;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url("/backgrounds/telegram.jpg");
+	background-color: #dfe4e8;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url("/backgrounds/telegram.jpg");
 }
 
 main p img {
-  display: block;
-  max-width: 100%;
-  margin: 0 auto;
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
 }
 
 main p img:not(:first-child) {
-  padding-top: 1rem;
+	padding-top: 1rem;
 }
 
 main p img:not(:last-child) {
-  padding-bottom: 1rem;
+	padding-bottom: 1rem;
 }
 
 main h1, main h2, main h3 {
-  color: whitesmoke;
-  margin: 0 auto;
-  text-shadow: 1px 1px 10px #000;
+	color: whitesmoke;
+	margin: 0 auto;
+	text-shadow: 1px 1px 10px #000;
 }
 
 main h1 {
-  padding: 3rem 0.5rem 2rem;
+	padding: 3rem 0.5rem 2rem;
 }
 
 main h2 {
-  padding: 1rem 0.5rem 0;
+	padding: 1rem 0.5rem 0;
 }
 
 main h3 {
-  padding: 0.5rem 0.5rem 0;
+	padding: 0.5rem 0.5rem 0;
 }
 
 footer {
-  color: whitesmoke;
-  padding: 3rem 1.5rem 6rem;
-  text-align: center;
+	color: whitesmoke;
+	padding: 3rem 1.5rem 6rem;
+	text-align: center;
 }
 
 footer svg {
-  fill: whitesmoke;
-  margin: 4px;
+	fill: whitesmoke;
+	margin: 4px;
 }
 
 a, a:active, a:visited, a:focus {
-  color: inherit;
-  transition: all 0.2s ease;
+	color: inherit;
+	transition: all 0.2s ease;
 }
 
 a:hover {
-  color: #363636;
+	color: #363636;
 }
 
 footer a:hover {
-  color: #dbdbdb;
+	color: #dbdbdb;
 }
 
 #veranstaltungsplan {
-  max-height: 400px;
+	max-height: 400px;
 }
