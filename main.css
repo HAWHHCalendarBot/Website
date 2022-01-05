@@ -13,10 +13,11 @@ body {
 }
 
 header {
-  text-align: center;
+  color: whitesmoke;
   padding-bottom: 20vmin;
   padding-top: 20vmin;
-  color: whitesmoke;
+  text-align: center;
+  text-shadow: 1px 1px 10px #000;
 }
 
 header #logo {
@@ -66,6 +67,7 @@ main p img:not(:last-child) {
 main h1, main h2, main h3 {
   color: whitesmoke;
   margin: 0 auto;
+  text-shadow: 1px 1px 10px #000;
 }
 
 main h1 {
