@@ -13,4 +13,10 @@ RUN    ln -s /eventfiles/all.txt \
     && ln -s /eventfiles/all.csv \
     && ln -s /calendars tg
 
+HEALTHCHECK \
+	--interval=30s \
+	--timeout=5s \
+	--retries=2 \
+	CMD wget -nv --tries=1 --spider http://127.0.0.1/ || exit 1
+
 COPY html ./
